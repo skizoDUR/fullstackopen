@@ -1,0 +1,18 @@
+Single Page app diagram
+
+Browser --> Server : GET https://studies.cs.helsinki.fi/exampleapp/spa
+NOTE {
+The response is an HTML document, its <head> instructs the browser to perform a two extra
+requests, CSS and the main javascript file..
+}
+Browser --> Server : GET https://studies.cs.helsinki.fi/exampleapp/main.css
+Browser --> Server : GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+Browser --> Server : GET https://studies.cs.helsinki.fi/exampleapp/data.json
+
+NOTE {
+	spa.js instructs the browser to perform a GET on data.json,
+	when there's an OK (200) response from the server it proceeds to:
+	1 - Parse the JSON.
+	2 - Display the data.
+}
+

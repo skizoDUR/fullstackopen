@@ -1,0 +1,13 @@
+New note on single page app
+
+There's a form under the id 'notes_form',
+when the save button is clicked a handler for the
+submit action is called. (on browser side), it
+creates a note object and pushes it to a notes array. The whole page is redrawn
+and the note is sent , sendToServer().
+sendToServer() sends a POST request containing the note.
+
+Browser --> Server : POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+
+Server --> Browser : 201 CREATED
+

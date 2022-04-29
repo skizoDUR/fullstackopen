@@ -1,0 +1,13 @@
+Submitting text to notes website
+
+Browser --> Server : POST studies.cs.helsinki.fi/exampleapp/new_note
+
+NOTE {
+	The server handles the request by adding the input to the notes
+	list. And then redirects the user.
+}
+Server --> Browser : Response "302 REDIRECT"
+Browser --> Server : GET studies.cs.helsinki.fi/exampleapp/notes
+Then the page is redisplayed...
+
+
